@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Анализ тональности текста</title>
+  </head>
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+    .wrapper > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+      box-sizing: border-box;
+    }
+    .result {
+      display: flex;
+      justify-content: space-between;
+    }
+    .result-wrapper {
+      width: 100%;
+    }
+    .result__left {
+      color: green;
+    }
+    .button {
+	height: 50px;
+    position: relative;
+    border: 1px solid white;
+    }
+    .result__right {
+      color: red;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div>
+        <h1>Анализ эмоциональной окраски текста</h1>
+        <form action="" method="post">
+          <textarea
+           placeholder="Введите текст на русском языке..."
+           name="text_tonal"
+         ></textarea
+         ><br />
+            <div class="button"> <input type="submit" name="submit_button" value="Получить результат"></div>
+          {% if flag %}
+              <p class="result-wrapper">
+              Введенный текст: {{ text }}
+              </p>
+          <p class="result-wrapper">
+            <div class="result">
+              <div class="result__left">
+                Эмоциональная окраска: {{ type_of_tonal }}
+              </div>
+              <div class="result__right">
+                Вероятность: {{ percent }}
+              </div>
+            </div>
+          </p>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
