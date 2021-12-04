@@ -60,7 +60,7 @@ input.txt - текстовый файл c расширением txt, котор
 1) загрузить файл train_in_colab.ipynb на сайте https://colab.research.google.com;
 2) выбрать режим GPU: перейти по Runtime > Change runtime type и выбрать GPU в качестве Hardware accelerator
 3) Запустить файл с помощью Runtime > Run all (Ctrl + F9).
-4) После запуска файла в первых двух ячейках будет предлоежено загрузить файлы: необходимо загрузить файлы ./dataset/positive.csv
+4) После запуска файла в первых двух ячейках будет предложено загрузить файлы: необходимо загрузить файлы ./dataset/positive.csv
 и /dataset/negative.csv c помощью появившихся в этих ячейках кнопки "Выбрать файлы".
     
 
